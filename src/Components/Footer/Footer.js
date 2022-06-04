@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import Log from '../Images/logo.png';
-import Facebook from '../Images/facebook.png'
-import Instagram from '../Images/instagram.png'
-import Twitter from '../Images/twitter.png'
+import Facebook from '../Images/facebook.png';
+import Instagram from '../Images/instagram.png';
+import Twitter from '../Images/twitter.png';
+import Youtube from '../Images/youtube.png';
 import {Link} from 'react-router-dom';
 
 let date = new Date().getFullYear();
@@ -47,6 +48,10 @@ const Footer = () => {
                                 <img src={Twitter}  style={{width:'30px'}} alt='Twitter' />
                             </a> 
 
+                            <a href='https://mobile.twitter.com/4dchildren' target='_blank'>  
+                                <img src={Youtube}  style={{width:'30px'}} alt='Youtube' />
+                            </a> 
+
                         </Social>
                     </Third>
                 </Up>
@@ -65,7 +70,8 @@ const Container = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 20px 0 8px 0;
+    padding: 30px 0 8px 0;
+    margin-top: 20px;
 `
 
 const ContainerWrapper = styled.div`
@@ -84,12 +90,11 @@ const Up = styled.div`
     justify-content: space-around;
     color: #488F05;
     font-weight: 500;
-    margin-bottom: 20px;
 
     @media screen and (max-width: 620px){
         flex-direction: column;
         align-items: center;
-        width: 80%;
+        width: 85%;
     }
 `
 

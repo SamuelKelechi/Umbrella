@@ -4,6 +4,8 @@ import Achieve from './Achieve/Achieve'
 import HeroSection from './HeroSection/HeroSection'
 import Join from './Join/Join'
 import MissionComp from './MissionComp/MissionComp'
+import Support from './Support/Support'
+import Team from './Team/Team'
 
 const Home = () => {
   return (
@@ -13,6 +15,8 @@ const Home = () => {
         <MissionComp />
         <Join/>
         <Achieve />
+        <Team />
+        <Support />
     </>
   )
 }

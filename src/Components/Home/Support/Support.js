@@ -1,0 +1,68 @@
+import React from 'react';
+import styled from 'styled-components';
+
+const Support = () => {
+  return (
+    <Container>
+      <ContainerWrap>
+        <Holder>
+          <Para>WANT TO MAKE A DIFFERENCE?</Para>
+          <Content>
+            Support the <br/> humanitarian <br/> movement voluntarily
+          </Content>
+          <Button>Donate</Button>
+        </Holder>
+      </ContainerWrap>
+    </Container>
+  )
+}
+
+export default Support;
+
+const Container = styled.div`
+  width: 100%;
+  padding: 60px 0 60px 0;
+  display: flex;
+  justify-content: center;
+  background-color: grey;
+  color: white;
+`
+
+const ContainerWrap = styled.div`
+  width: 90%;
+  display: flex;
+  justify-content: center;
+`
+const Holder = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+const Para = styled.div`
+  font-weight: 500;
+`
+
+const Content = styled.div`
+  text-align: center;
+  font-size: 60px;
+  font-weight: 500;
+  margin-top: 20px;
+`
+
+const Button = styled.div`
+    background-color: #488F05;
+    color: white;
+    height: 50px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 30px;
+
+    @media screen and (max-width: 425px){
+        width: 100px;
+        height: 40px;
+    }
+`

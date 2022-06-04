@@ -68,6 +68,7 @@ const Right = styled.div`
     }
     @media screen and (max-width: 425px){
         width: 100%;
+        margin-top: 30px;
     }
 `
 
@@ -79,6 +80,7 @@ const Left = styled.div`
     }
     @media screen and (max-width: 425px){
         width: 100%;
+        margin-top: 30px;
     }
 `
 const Title = styled.div`

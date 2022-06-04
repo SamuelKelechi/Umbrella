@@ -11,7 +11,7 @@ const Join = () => {
                 <Line></Line>
                 <br/>
                 <Content>
-                    We are first a community before an NGO
+                    We are first a tribe before an NGO
                 </Content>
                 <br/>
                 <Button>JOIN OUR COMMUNITY</Button>

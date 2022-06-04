@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import Data1 from './Data1';
+import { AiFillStar } from 'react-icons/ai';
+
 
 const Achieve = () => {
   return (
@@ -8,7 +11,21 @@ const Achieve = () => {
             <Title>Our Achievements</Title>
             <CardWrap>
                 <Card>
-                    
+                    <Head><AiFillStar size={60}/></Head>
+                    <Data1  end={7000} suffix="+"/>
+                    <Para>Beneficiaries</Para>
+                </Card>
+
+                <Card>
+                    <Head><AiFillStar size={60}/></Head>
+                    <Data1  end={40} suffix="+"/>
+                    <Para>Volunteers</Para>
+                </Card>
+
+                <Card>
+                    <Head><AiFillStar size={60}/></Head>
+                    <Data1  end={5} />
+                    <Para>Projects</Para>
                 </Card>
             </CardWrap>
         </ContainerWrap>
@@ -40,6 +57,7 @@ const ContainerWrap = styled.div`
 const Title = styled.div`
     font-size: 45px;
     font-weight: bold;
+    text-align: center;
 
     @media screen and (max-width: 425px){
         font-size: 30px;
@@ -55,4 +73,20 @@ const CardWrap = styled.div`
 `
 const Card = styled.div`
     margin: 15px;
+    font-weight: bold;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+const Para = styled.div`
+    font-size: 25px;
+    opacity: 0.8;
+    margin-top: 10px;
+`
+const Head = styled.div`
+
+    @media screen and (max-width: 425px){
+        margin-bottom: -20px;
+    }
 `
