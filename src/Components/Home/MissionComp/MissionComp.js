@@ -1,7 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const MissionComp = () => {
+
+
+    React.useEffect(()=>{
+        Aos.init()
+    },[]);
   return (
     <Container>
         <ContainerWrap>
@@ -9,7 +16,9 @@ const MissionComp = () => {
                 <Title>Our Mission</Title>
                 <Lines></Lines>
                 <br/>
-                <Content>
+                <Content data-aos="fade-up"
+                    data-aos-offset="200"
+                    data-aos-easing="ease-in-sine">
                     We aim to see an Africa where every child is properly fed and Quality Education in Rural Africa is paramount.
                 </Content>
                 <br/>
@@ -24,7 +33,9 @@ const MissionComp = () => {
                 <Title>Our Vision</Title>
                 <Lines></Lines>
                 <br/>
-                <Content>
+                <Content data-aos="fade-up"
+                    data-aos-offset="200"
+                    data-aos-easing="ease-in-sine">
                     Changing the narrative of the African child living in rural part of Africa through our series of projects.
                 </Content>
                 <br/>
@@ -104,7 +115,7 @@ const Line = styled.div`
 
 const Lines = styled.div`
     width: 80px;
-    border: 2px solid #FFDE00;
+    border: 1px solid #FFDE00;
     margin-top: 3px;
     /* border: 1px solid #EF0303;    */
 `

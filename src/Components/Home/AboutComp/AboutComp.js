@@ -1,5 +1,6 @@
 import React from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components';
+import Back from '../Images/Backg.png'
 
 const AboutComp = () => {
   return (
@@ -23,6 +24,11 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     color: #488F05;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.10),rgba(255, 255, 255, 0.1)) , url(${Back});
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0 40px 0;
 
     @media screen and (max-width: 425px){
 		margin-top: -50px;
@@ -42,7 +48,7 @@ const Title = styled.div``
 
 const Line = styled.div`
     width: 40px;
-    border: 2px solid #FFDE00;
+    border: 1px solid #FFDE00;
     margin-top: 3px;
     /* border: 1px solid #EF0303;    */
 `

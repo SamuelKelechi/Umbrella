@@ -6,8 +6,6 @@ import Sam from '../Images/sam.jpeg';
 import Jenny from '../Images/jenny.jpeg';
 import Dammy from '../Images/dami.jpeg';
 
-
-
 const Team = () => {
   return (
     <>

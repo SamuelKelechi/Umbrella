@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Back from '../Images/join.jpeg'
 
 const Join = () => {
   return (
@@ -27,8 +28,13 @@ const Container = styled.div`
     margin-top: 40px;
     display: flex;
     justify-content: center;
-    padding: 80px 0 80px 0;
-    background-color: whitesmoke;
+    padding: 120px 0 120px 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(${Back});
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
 
     @media screen and (max-width: 860px){
         padding: 40px 0 40px 0;
@@ -63,7 +69,7 @@ const Title = styled.div`
 
 const Line = styled.div`
     width: 100%;
-    border: 1px solid black;
+    border: 1px solid white;
 `
 
 const Content = styled.div`

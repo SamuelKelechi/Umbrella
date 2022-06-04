@@ -8,7 +8,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import About from './Components/About/About';
+import Event from './Components/Event/Event';
 import Footer from './Components/Footer/Footer';
 
 function App () {
@@ -20,7 +20,7 @@ function App () {
             <Header />
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
+              <Route path="/events" element={<Event />} />
             </Routes>
             <Footer/>
         </ScrollToTop>

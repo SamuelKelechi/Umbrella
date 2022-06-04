@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Back from '../Images/support.jpeg'
 
 const Support = () => {
   return (
@@ -24,8 +25,10 @@ const Container = styled.div`
   padding: 60px 0 60px 0;
   display: flex;
   justify-content: center;
-  background-color: grey;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(${Back});
+  background-attachment: fixed;
   color: white;
+  font-weight: bold;
 `
 
 const ContainerWrap = styled.div`
@@ -48,6 +51,10 @@ const Content = styled.div`
   font-size: 60px;
   font-weight: 500;
   margin-top: 20px;
+
+  @media screen and (max-width: 425px){
+    font-size: 45px;
+  }
 `
 
 const Button = styled.div`
