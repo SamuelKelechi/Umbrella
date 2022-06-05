@@ -1,5 +1,8 @@
 import React from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components';
+import Left from '../Images/left.jpg';
+import Right from '../Images/right.jpg';
+
 
 export const Projects = () => {
   return (
@@ -10,7 +13,7 @@ export const Projects = () => {
         <ContainerWrap>
             <First>
                 <Line></Line>
-                <Avatar />
+                <Avatar src={Left}/>
             </First>
 
             <Second>
@@ -25,7 +28,7 @@ export const Projects = () => {
 
             <Third>
                 <Line></Line>
-                <Avatar />
+                <Avatar  src={Right}/>
             </Third>
         </ContainerWrap>
     </Container>
@@ -85,6 +88,7 @@ const Second = styled.div`
 
     @media screen and (max-width: 768px){
         width: 70%;
+        margin-top: 15px;
     }
     @media screen and (max-width: 425px){
         width: 100%;
@@ -105,6 +109,8 @@ const Avatar = styled.img`
     height: 320px;
     width: 100%;
     background-color: red;
+    object-position: center;
+    object-fit: cover;
 `
 
 const Line = styled.div`
