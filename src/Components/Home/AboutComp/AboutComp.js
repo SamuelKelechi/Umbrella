@@ -32,6 +32,7 @@ const Container = styled.div`
 
     @media screen and (max-width: 425px){
 		margin-top: -50px;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.255),rgba(255, 255, 255, 0.50)) , url(${Back});
 	}
 `
 
