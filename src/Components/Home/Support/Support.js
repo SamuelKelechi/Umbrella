@@ -28,6 +28,7 @@ const Container = styled.div`
   background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(${Back});
   background-attachment: fixed;
   background-size: cover;
+  background-position: center;
   color: white;
   font-weight: bold;
 `

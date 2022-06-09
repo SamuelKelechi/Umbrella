@@ -138,7 +138,6 @@ const TitleText = styled.div`
 	@media screen and (max-width: 600px){
 		font-size:25px;
 	}
-
 `
 const Button = styled.div`
     background-color: #488F05;
