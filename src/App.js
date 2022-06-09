@@ -11,6 +11,9 @@ import {
 } from "react-router-dom";
 import Event from './Components/Event/Event';
 import Footer from './Components/Footer/Footer';
+import Blog from './Components/Blog/Blog';
+import About from './Components/About/About';
+import Contact from './Components/Contact/Contact';
 
 function App () {
   const [done, setDone] = useState(undefined)
@@ -32,6 +35,9 @@ function App () {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/events" element={<Event />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/contact" element={<Contact />} />
             </Routes>
             <Footer/>
           </>

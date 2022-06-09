@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Back from '../Images/Backg.png'
+import Back from '../Images/Backg.png';
+import {Link} from 'react-router-dom';
 
 const AboutComp = () => {
   return (
@@ -11,7 +12,7 @@ const AboutComp = () => {
             <br/>
             <Content>Protecting children and creating a happy, loving environment for them in which they can thrive and support to communities</Content>
             <br/>
-            <ButtonHold><Button>READ MORE</Button></ButtonHold>
+            <ButtonHold to='/about'><Button>READ MORE</Button></ButtonHold>
         </ContainerWrap>
     </Container>
   )
@@ -64,10 +65,12 @@ const Content = styled.div`
     }
 `
 
-const ButtonHold = styled.div`
+const ButtonHold = styled(Link)`
     width: 100%;
     display: flex;
     justify-content: center;
+    color: inherit;
+    text-decoration: none;
 `
 
 const Button = styled.div`

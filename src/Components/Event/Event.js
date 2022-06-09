@@ -8,7 +8,7 @@ import { Projects } from './Projects';
 const Event = () => {
   return (
     <Container>
-         <LandingPage>
+            <LandingPage>
                 <Image src = {img}/>
                 <OverLayer>
                     <Span>Events</Span>
@@ -56,15 +56,23 @@ const OverLayer = styled.div`
 `
 const Image = styled.img`
     width:100%;
-    height:400px;
+    height: 450px;
     object-fit:cover;
     position: absolute;
     object-position: top;
+
+    @media screen and (max-width: 450px){
+        height: 400px;
+    }
 `
 const LandingPage = styled.div`
     width:100%;
-    height:400px;
+    height:450px;
     background-color:blue;
+
+    @media screen and (max-width: 450px){
+        height: 400px;
+    }
 `    
 const Links = styled(Link)`
   text-decoration: none;

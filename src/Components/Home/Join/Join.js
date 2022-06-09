@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Back from '../Images/join.jpeg'
+import Back from '../Images/join.jpeg';
+import {Link} from 'react-router-dom';
 
 const Join = () => {
   return (
@@ -15,7 +16,7 @@ const Join = () => {
                     We are first a tribe before an NGO
                 </Content>
                 <br/>
-                <Button>JOIN OUR COMMUNITY</Button>
+                <Button to='/contact'>JOIN OUR COMMUNITY</Button>
             </Holder>
         </ContainerWrap>
     </Container>
@@ -77,7 +78,7 @@ const Content = styled.div`
     font-weight: bold;
 `
 
-const Button = styled.div`
+const Button = styled(Link)`
     background-color: #488F05;
     color: white;
     height: 50px;
@@ -86,4 +87,5 @@ const Button = styled.div`
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    text-decoration: none;
 `
