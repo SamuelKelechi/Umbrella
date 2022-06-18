@@ -2,6 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import Left from '../Images/left.jpg';
 import Right from '../Images/right.jpg';
+import Schl1 from '../Images/sch1.jpeg';
+import Schl2 from '../Images/sch2.jpg';
+import Along1 from '../Images/along1.jpeg';
+import Along2 from '../Images/along2.jpeg';
+import Remote1 from '../Images/remote1.jpg';
+import Remote2 from '../Images/remote2.jpeg';
+
 
 
 export const Projects = () => {
@@ -13,22 +20,66 @@ export const Projects = () => {
         <ContainerWrap>
             <First>
                 <Line></Line>
-                <Avatar src={Left}/>
+                <Avatar src={Remote1}/>
             </First>
 
             <Second>
-                <Date>05 JUNE, 2022</Date>
+                <Date>25 October, 2021</Date>
                 <Line></Line>
                 <Content>
-                    Families Reachout Project 1.0
+                    A Remote School In North East Region
                 </Content>
-                <Para>Families Reachout Project 1.0</Para>
-                <Button>READ MORE</Button>
+                <Para>A Remote School In North East Region, Ghana</Para>
+                <a href='https://www.modernghana.com/news/1091832/school-uniforms-donated-to-a-remote-school-in-nort.html' target='_blank'><Button>READ MORE</Button></a>
             </Second>
 
             <Third>
                 <Line></Line>
-                <Avatar  src={Right}/>
+                <Avatar  src={Remote2}/>
+            </Third>
+        </ContainerWrap>
+        <br/>
+        <ContainerWrap>
+            <First>
+                <Line></Line>
+                <Avatar src={Along2}/>
+            </First>
+
+            <Second>
+                <Date>25 October, 2021</Date>
+                <Line></Line>
+                <Content>
+                    Take Ajegunle Child Along Project
+                </Content>
+                <Para>Take Ajegunle Child Along Project</Para>
+                <a href='https://www.urstrulypraiznews.com/2021/10/25/nigeria-umbrella-for-the-african-child-and-eagles-foundation-for-humanity-holds-the-take-ajegunle-child-along-project/' target='_blank'><Button>READ MORE</Button></a>
+            </Second>
+
+            <Third>
+                <Line></Line>
+                <Avatar  src={Along1}/>
+            </Third>
+        </ContainerWrap>
+        <br/>
+        <ContainerWrap>
+            <First>
+                <Line></Line>
+                <Avatar src={Schl1}/>
+            </First>
+
+            <Second>
+                <Date>20 October, 2021</Date>
+                <Line></Line>
+                <Content>
+                    School Uniforms Donated
+                </Content>
+                <Para>School Uniforms Donated</Para>
+                <a href='https://theglobalheroes.com/school-uniforms-donated-to-a-remote-school-in-north-east-region-ghana' target='_blank'><Button>READ MORE</Button></a>
+            </Second>
+
+            <Third>
+                <Line></Line>
+                <Avatar  src={Schl2}/>
             </Third>
         </ContainerWrap>
     </Container>
@@ -40,7 +91,7 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 80px 0 80px 0;
+    padding: 50px 0 50px 0;
     background-color: whitesmoke;
 `
 const Title = styled.div`
@@ -55,7 +106,7 @@ const Title = styled.div`
 `
 const ContainerWrap = styled.div`
     width: 90%;
-    margin-top: 40px;
+    margin-top: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -85,6 +136,10 @@ const Second = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    a{
+        text-decoration: none;
+    }
 
     @media screen and (max-width: 768px){
         width: 70%;

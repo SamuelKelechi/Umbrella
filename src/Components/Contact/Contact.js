@@ -31,17 +31,17 @@ const Contact = () => {
                 <Left>
                     <Country>Nigeria</Country>
                     <Line></Line>
-                    <Par><GrStatusGood style={{ marginRight:'10px'}}/>Uyo, Akwa Ibom State, Nigeria</Par>
-                    <Par><GiCancel style={{ marginRight:'10px'}}/>+234 802 378 4947</Par>
-                    <Par><FaRegDotCircle style={{ marginRight:'10px'}}/>admin@bhsnetworkafrica.com</Par>
+                    <Par><GrStatusGood style={{ marginRight:'10px'}}/>Ajegunle, Lagos State, Nigeria</Par>
+                    <Par><GiCancel style={{ marginRight:'10px'}}/>+234 9157451921</Par>
+                    <Par><FaRegDotCircle style={{ marginRight:'10px'}}/>umbrellafortheafricanchild@gmail.com</Par>
                 </Left>
-                <Right>
+                {/* <Right>
                 <Country>Ghana</Country>
                     <Line></Line>
                     <Par><GrStatusGood style={{ marginRight:'10px'}}/>Accra, Ghana</Par>
                     <Par><GiCancel style={{ marginRight:'10px'}}/>+234 802 378 4947</Par>
                     <Par><FaRegDotCircle style={{ marginRight:'10px'}}/>admin@bhsnetworkafrica.com</Par>
-                </Right>
+                </Right> */}
             </Contacts>
             <Form>
                 <First>
@@ -201,7 +201,7 @@ const Form = styled.div`
     margin-top: 30px;
 
     @media screen and (max-width: 768px){
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 `
 const First = styled.div`

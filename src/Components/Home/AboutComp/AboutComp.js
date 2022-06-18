@@ -56,7 +56,7 @@ const Line = styled.div`
 `
 
 const Content = styled.div`
-    width: 850px;
+    width: 75%;
     font-size: 55px;
 
     @media screen and (max-width: 870px){
