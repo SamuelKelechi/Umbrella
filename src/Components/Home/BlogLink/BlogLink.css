@@ -1,0 +1,81 @@
+.BlogLinkContain{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 20px 0;
+}
+
+.BlogLinkWrapper{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.BlogTitle{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    font-size: 45px;
+    font-weight: bold;
+    color: #488F05;
+
+    @media screen and (max-width: 650px){
+        font-size: 30px;
+    }
+}
+
+.CardsWrap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.CardHold{
+    width: 300px;
+    border: 1px solid #488F05;
+    border-radius: 8px;
+    margin: 15px;
+    padding-bottom: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width: 769px){
+    .CardsWrap{    
+        flex-direction: column;
+        align-items: center;
+    }
+    .CardHold{
+        margin: 0;
+        margin-top: 15px;
+    }
+}
+
+.BlogImg{
+    width: 100%;
+    height: 200px;
+    border-radius: 8px 8px 0 0;
+}
+
+.StoryTitle{
+    margin: 2px;
+    font-weight: 500;
+}
+
+.BlogLnk{
+    cursor: pointer;
+    width: 90px;
+}
+
+@media screen and (max-width: 425px){
+    .BlogLinkWrapper{
+        width: 90%;
+    }
+    .CardHold{
+        width: 90%;
+    }
+}

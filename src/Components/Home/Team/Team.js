@@ -5,6 +5,8 @@ import Sylvia from '../Images/sylvia.jpeg';
 import Sam from '../Images/sam.jpeg';
 import Jenny from '../Images/jenny.jpeg';
 import Dammy from '../Images/dami.jpeg';
+import Gammel from '../Images/Gammel.jpg';
+
 
 const Team = () => {
   return (
@@ -14,25 +16,17 @@ const Team = () => {
         <Container>
             <ContainerWrap>
                 <Card>
-                    <Avatar src={Obinna}/>
-                    <Name>
-                        Opara O. Marknelson
-                    </Name>
-                    <Line></Line>
-                </Card>
-
-                <Card>
-                    <Avatar src={Sylvia}/>
-                    <Name>
-                        Sylvia Oka
-                    </Name>
-                    <Line></Line>
-                </Card>
-
-                <Card>
                     <Avatar src={Sam}/>
                     <Name>
                         Samuel K. Mensah
+                    </Name>
+                    <Line></Line>
+                </Card>
+
+                <Card>
+                    <Avatar src={Obinna}/>
+                    <Name>
+                        Opara O. Marknelson
                     </Name>
                     <Line></Line>
                 </Card>
@@ -52,6 +46,23 @@ const Team = () => {
                     </Name>
                     <Line></Line>
                 </Card>
+
+                <Card>
+                    <Avatar src={Sylvia}/>
+                    <Name>
+                        Sylvia Oka
+                    </Name>
+                    <Line></Line>
+                </Card>
+
+                <Card >
+                    <Avatar src={Gammel}/>
+                    <Name>
+                        Gamel Issaku
+                    </Name>
+                    <Line></Line>
+                </Card>
+    
             </ContainerWrap>
         </Container>
     </>
@@ -84,7 +95,7 @@ const Container = styled.div`
 `
 
 const ContainerWrap = styled.div`
-    width: 95%;
+    width: 90%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -94,10 +105,11 @@ const Card = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px;
+    margin: 10px;
 
     @media screen and (max-width: 425px){
         margin: 15px;
+        width: 90%;
     }
 `
 

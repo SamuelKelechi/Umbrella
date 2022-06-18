@@ -72,6 +72,7 @@ const Container = styled.div`
     justify-content: center;
     padding: 30px 0 8px 0;
     margin-top: 20px;
+    border-top: 1px solid whitesmoke;
 `
 
 const ContainerWrapper = styled.div`
