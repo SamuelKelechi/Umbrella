@@ -95,7 +95,7 @@ const Container = styled.div`
 `
 
 const ContainerWrap = styled.div`
-    width: 90%;
+    width: 95%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -105,7 +105,7 @@ const Card = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px;
+    margin: 8px;
 
     @media screen and (max-width: 425px){
         margin: 15px;

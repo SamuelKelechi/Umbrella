@@ -1,9 +1,27 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 import styled from 'styled-components';
-import Back from '../Images/blog1.jpeg';
+import Back from '../Images/blog.jpg';
+import {db} from "../../Base";
+import {collection, getDocs, limit, query, orderBy} from "firebase/firestore";
 
 
 const Blog = () => {
+    const [getblog, setGetblog] = useState([]);
+
+    const userCollectionRef = collection(db, "blog")
+
+    const querry = query(userCollectionRef, orderBy("createdAt", "desc"))
+
+    const getBlog = async () => {
+        const data = await getDocs(querry, userCollectionRef);
+        setGetblog(data.docs.map((doc) => ({...doc.data(), id:doc.id})))
+    };
+
+    
+    useEffect(() => {
+        getBlog();
+    }, []);
+
   return (
     <Container>
         <Hero>
@@ -13,11 +31,18 @@ const Blog = () => {
         </Hero>
         <Title>Blog Updates</Title>
         <ContainerWrap>
-            <CardHold>
-                    <BlogImg src={Back} alt='BlogImage' className='BlogImg'/>
-                    <StoryTitle>Community Outreach in Ajeromi Ifelodun</StoryTitle>
+            
+            {getblog.map(({id, avatar, title, createdAt}) => (
+                <CardHold key={id}>
+                    <BlogImg src={avatar} alt='BlogImage' className='BlogImg'/>
+                    <StoryTitle>{title}</StoryTitle>
+                    <div style={{width:'100%', display:'flex', justifyContent:'flex-end', marginRight:'5px', opacity:'0.8'}}>
+                        {createdAt.toDate().toDateString()}
+                    </div>
                     <BlogLnk>Read..</BlogLnk>
-            </CardHold>
+                </CardHold>
+            ))}
+
         </ContainerWrap>
     </Container>
   )
@@ -95,6 +120,7 @@ const CardHold = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 
     @media screen and (max-width: 769px){
         margin: 0;
@@ -113,8 +139,10 @@ const StoryTitle = styled.div`
     margin: 2px;
     font-weight: 500;
     text-align: center;
+    text-transform: uppercase;
 `
 const BlogLnk = styled.button`
     cursor: pointer;
     width: 90px;
+    margin-bottom: 5px;
 `

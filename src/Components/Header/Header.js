@@ -26,7 +26,7 @@ const Header = () => {
                         <Links to='/blog'>Blog</Links>
                         <Links to='/contact'>Contact</Links>
                 </Navs>
-                <Button>DONATE</Button>
+                <Links to='/donate'><Button>DONATE</Button></Links>
             </Wrapper>
           {click ? 
           (

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Back from '../Images/support.jpeg'
+import Back from '../Images/support.jpeg';
+import {Link} from 'react-router-dom';
 
 const Support = () => {
   return (
@@ -11,7 +12,7 @@ const Support = () => {
           <Content>
             Support the <br/> humanitarian <br/> movement voluntarily
           </Content>
-          <Button>Donate</Button>
+         <Links to='/donate'><Button>Donate</Button></Links> 
         </Holder>
       </ContainerWrap>
     </Container>
@@ -74,4 +75,7 @@ const Button = styled.div`
         width: 100px;
         height: 40px;
     }
+`
+const Links = styled(Link)`
+  text-decoration: none;
 `

@@ -16,6 +16,8 @@ import About from './Components/About/About';
 import Contact from './Components/Contact/Contact';
 import BlogDetails from './Components/BlogDetails/BlogDetails';
 import Admin from './Components/Admin/Admin';
+import Donate from './Components/Donate/Donate';
+import Gallery from './Components/Gallery/Gallery';
 
 function App () {
   const [done, setDone] = useState(undefined)
@@ -40,7 +42,9 @@ function App () {
               <Route path="/about" element={<About />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/BlogDetails" element={<BlogDetails />} />
+              <Route path="/donate" element={<Donate />} />
+              <Route path="/gallery" element={<Gallery />} />
+              <Route path="/blogdetails/:id" element={<BlogDetails />} />
               <Route path="/utacadmin2022" element={<Admin />} />
             </Routes>
             <Footer/>

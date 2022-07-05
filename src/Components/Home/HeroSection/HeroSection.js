@@ -7,6 +7,7 @@ import pic1 from "../Images/Slide1.jpg";
 import pic2 from "../Images/Slide2.jpg";
 import pic3 from "../Images/Slide6.jpg";
 import pic4 from "../Images/Slide4.jpg";
+import {Link} from "react-router-dom";
 
 
 const HeroSection = () => {
@@ -45,7 +46,7 @@ const HeroSection = () => {
 						Transforming the lives of children and support for communities.
 					</TitleText>
 					<p>…one community at a time</p>
-					<Button>DONATE</Button>
+					<Links to='/donate'><Button>DONATE</Button></Links>
 				</ContentWrap>
 			</TextContent>
 	
@@ -153,4 +154,7 @@ const Button = styled.div`
         width: 100px;
         height: 40px;
     }
+`
+const Links = styled(Link)`
+	text-decoration: none;
 `

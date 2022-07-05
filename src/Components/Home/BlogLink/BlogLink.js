@@ -1,22 +1,43 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import './BlogLink.css';
 import {GiFastForwardButton} from 'react-icons/gi';
 import styled from 'styled-components';
-import Back from '../Images/Slide2.jpg';
+import {db} from "../../../Base";
+import {collection, getDocs, limit, query, orderBy} from "firebase/firestore";
+
 
 function BlogLink() {
+    const [getblog, setGetblog] = useState([]);
+
+    const userCollectionRef = collection(db, "blog")
+
+    const querry = query(userCollectionRef, orderBy("createdAt", "desc"), limit(3))
+
+    const getBlog = async () => {
+        const data = await getDocs(querry, userCollectionRef);
+        setGetblog(data.docs.map((doc) => ({...doc.data(), id:doc.id})))
+    };
+
+    
+    useEffect(() => {
+        getBlog();
+    }, []);
+
   return (
     <div className='BlogLinkContain'>
         <div className='BlogLinkWrapper'>    
             <div className='BlogTitle'>Blog</div>
             <div className='CardsWrap'>
 
-                <div className='CardHold'>
-                    <img src={Back} alt='BlogImage' className='BlogImg'/>
-                    <marquee className='StoryTitle'>Community Outreach in Ajeromi Ifelodun</marquee>
-                    <button className='BlogLnk'>Read..</button>
-                </div>
+                {getblog.map(({id, title, avatar, createdAt}) => (
+                    <div className='CardHold' key={id}>
+                        <img src={avatar} alt='BlogImage' className='BlogImg'/>
+                        <marquee className='StoryTitle'>{title}</marquee>
+                        <div style={{opacity:'0.7'}}>{createdAt.toDate().toDateString()}</div>
+                        <Links to={`/blogdetails/${id}`}><button className='BlogLnk'>Read..</button></Links>
+                    </div>
+                ))}
 
             </div>
             <Links to='/blog'>More Blog<GiFastForwardButton style={{fontSize:'25px', marginBottom:'-3px'}}/></Links>
@@ -35,5 +56,6 @@ const Links = styled(Link)`
     border-radius: 5px;
     align-items: center;
     color: #488F05;
-    margin-top: 15px;
+    margin-top: 10px;
+    margin-bottom: 5px;
 `
