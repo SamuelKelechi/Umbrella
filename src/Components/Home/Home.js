@@ -1,6 +1,7 @@
 import React from 'react'
 import AboutComp from './AboutComp/AboutComp'
 import Achieve from './Achieve/Achieve'
+import Advocate from './Advocate/Advocate'
 import BlogLink from './BlogLink/BlogLink'
 import HeroSection from './HeroSection/HeroSection'
 import Join from './Join/Join'
@@ -18,6 +19,7 @@ const Home = () => {
         <Achieve />
         <Team />
         <Support />
+        <Advocate />
         <BlogLink />
     </>
   )

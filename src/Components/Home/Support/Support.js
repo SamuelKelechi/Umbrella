@@ -23,6 +23,7 @@ export default Support;
 
 const Container = styled.div`
   width: 100%;
+  margin-top: 5px;
   padding: 60px 0 60px 0;
   display: flex;
   justify-content: center;

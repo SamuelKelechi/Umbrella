@@ -15,7 +15,7 @@ function Donate() {
          <OverLayer>
              <Span>REACH THE LIFE OF THOSE <br/> WHO HAVE NO HOPE</Span>
              <p>
-                Help us reach more persons and families in need
+                Help us reach more families in need
              </p>
          </OverLayer>
      </LandingPage>
